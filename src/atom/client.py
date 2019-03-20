@@ -23,6 +23,7 @@ __author__ = 'j.s@google.com (Jeff Scudder)'
 
 
 import atom.http_core
+import atom.requests
 
 
 class Error(Exception):
@@ -56,7 +57,8 @@ class AtomPubClient(object):
       auth_token: An object which sets the HTTP Authorization header when its
                   modify_request method is called.
     """
-    self.http_client = http_client or atom.http_core.ProxiedHttpClient()
+    # self.http_client = http_client or atom.http_core.ProxiedHttpClient()
+    self.http_client = http_client or atom.requests.RequestsHttpClient()
     if host is not None:
       self.host = host
     if auth_token is not None:
