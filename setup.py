@@ -18,7 +18,7 @@
 import sys
 from distutils.core import setup
 
-required = ['pycrypto', 'tlslite']
+required = ['pycrypto', 'tlslite', 'requests']
 
 if sys.version_info[:3] < (2, 5, 0):
   required.append('elementtree')
