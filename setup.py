@@ -16,18 +16,18 @@
 
 
 import sys
-from distutils.core import setup
+from setuptools import setup
 
-required = ['pycrypto', 'tlslite', 'requests']
+required = ['tlslite', 'requests']
 
 if sys.version_info[:3] < (2, 5, 0):
-  required.append('elementtree')
+    required.append('elementtree')
 
 setup(
     name='gdata',
-    version='10.0.18',
+    version='12.0.18',
     description='Python client library for Google data APIs',
-    long_description = """\
+    long_description="""\
 The Google data Python client library makes it easy to interact with
 Google services through the Google Data APIs. This library provides data 
 models and service modules for the the following Google data services:
@@ -63,40 +63,40 @@ library may also be used with any Atom Publishing Protocol service (AtomPub).
     license='Apache 2.0',
     url='http://code.google.com/p/gdata-python-client/',
     packages=[
-      'atom', 
-      'gdata', 
-      'gdata.acl', 
-      'gdata.alt', 
-      'gdata.analytics', 
-      'gdata.apps', 
-      'gdata.apps.adminsettings', 
-      'gdata.apps.audit', 
-      'gdata.apps.emailsettings', 
-      'gdata.apps.groups',
-      'gdata.apps.migration',
-      'gdata.apps.multidomain',
-      'gdata.apps.organization', 
-      'gdata.blogger', 
-      'gdata.calendar', 
-      'gdata.calendar_resource',
-      'gdata.codesearch', 
-      'gdata.contacts', 
-      'gdata.contentforshopping', 
-      'gdata.docs', 
-      'gdata.dublincore', 
-      'gdata.exif', 
-      'gdata.geo', 
-      'gdata.media', 
-      'gdata.oauth', 
-      'gdata.opensearch',
-      'gdata.photos', 
-      'gdata.projecthosting',
-      'gdata.sites', 
-      'gdata.spreadsheet', 
-      'gdata.spreadsheets', 
-      'gdata.webmastertools', 
-      'gdata.youtube', 
-      ],
-    package_dir = {'gdata':'src/gdata', 'atom':'src/atom'},
+        'atom',
+        'gdata',
+        'gdata.acl',
+        'gdata.alt',
+        'gdata.analytics',
+        'gdata.apps',
+        'gdata.apps.adminsettings',
+        'gdata.apps.audit',
+        'gdata.apps.emailsettings',
+        'gdata.apps.groups',
+        'gdata.apps.migration',
+        'gdata.apps.multidomain',
+        'gdata.apps.organization',
+        'gdata.blogger',
+        'gdata.calendar',
+        'gdata.calendar_resource',
+        'gdata.codesearch',
+        'gdata.contacts',
+        'gdata.contentforshopping',
+        'gdata.docs',
+        'gdata.dublincore',
+        'gdata.exif',
+        'gdata.geo',
+        'gdata.media',
+        'gdata.oauth',
+        'gdata.opensearch',
+        'gdata.photos',
+        'gdata.projecthosting',
+        'gdata.sites',
+        'gdata.spreadsheet',
+        'gdata.spreadsheets',
+        'gdata.webmastertools',
+        'gdata.youtube',
+    ],
+    package_dir={'': 'src'},
     install_requires=required
 )
